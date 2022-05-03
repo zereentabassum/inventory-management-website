@@ -1,11 +1,11 @@
 import React from 'react';
 import Footer from '../Footer/Footer';
+import HeadingSection from '../HeadingSection/HeadingSection';
 
 const Home = () => {
     return (
         <div>
-            <h1>HOme</h1>
-            <hr />
+            <HeadingSection></HeadingSection>
             <Footer></Footer>
         </div>
     );

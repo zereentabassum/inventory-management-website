@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-      <div className='bg-info'>
+      <div className='bg-info mt-5 img-fluid'>
       <div className=' '>
           <div className="py-5 px-1  text-start footer">
 
