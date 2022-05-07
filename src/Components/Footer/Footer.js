@@ -3,11 +3,11 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-      <div className='bg-info mt-5 img-fluid'>
-      <div className=' '>
-          <div className="py-5 px-1  text-start footer">
+      <div className='bg-danger mt-5 img-fluid'>
+      <div>
+          <div className="py-5 px-1 text-light text-start footer">
 
-          <div  className='px-3'>
+            <div  className='px-3'>
                 <h5>Contact us</h5>
                 <p>Address: 1234 Street, SK</p>
                 <p>Email: Marvella34@gmail.com</p>
@@ -28,7 +28,8 @@ const Footer = () => {
             </div>
           </div>
           </div>
-          <div className='pb-4'>
+          <div className='py-2 copyright text-light'>
+              
           <p>Copyright © 2022. All rights reserved</p>
           </div>
           </div>  

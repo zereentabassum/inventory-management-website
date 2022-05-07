@@ -2,7 +2,9 @@
     width: 30% ;
     margin: 0 auto;
 }
-
+.form input{
+    background-color: rgb(255, 236, 212);
+}
 
 
 

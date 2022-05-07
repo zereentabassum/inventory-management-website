@@ -2,3 +2,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
+.copyright{
+    background-color: rgba(197, 26, 60, 0.911);
+}

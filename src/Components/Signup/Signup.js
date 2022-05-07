@@ -51,7 +51,7 @@ const Signup = () => {
             <Form onSubmit={emailSignup} className='form'>
             <Form.Group className='text-start pb-3'>
             <Form.Label >Name:</Form.Label>
-            <Form.Control type="text" 
+            <Form.Control type="text"
             placeholder="Your name" name='name' required/>
             </Form.Group>
             <Form.Group className="mb-3 text-start" controlId="formBasicEmail">
