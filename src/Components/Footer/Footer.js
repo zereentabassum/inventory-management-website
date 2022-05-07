@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-      <div className='bg-danger mt-5 img-fluid'>
+      <div className='bg-danger mt-5 img-fluid footer-section'>
       <div>
           <div className="py-5 px-1 text-light text-start footer">
 

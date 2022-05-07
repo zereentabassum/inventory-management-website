@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import './Signup.css';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
 const Signup = () => {
@@ -11,7 +11,8 @@ const Signup = () => {
     user,
     loading,
     error,
-  ] = useCreateUserWithEmailAndPassword(auth);
+  ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
   const navigate = useNavigate()
 
@@ -23,26 +24,28 @@ const Signup = () => {
 
     }
     let load;
-    if (loading) {
+    if (loading || updating) {
       load = <p>Loading...</p>;
     }
 
+
     // if(user){
-    //   navigate('/home');
+    //   alert('Your account has been created');
     // }
 
-    if(user){
-      alert('Your account has been created');
-    }
-
-  const emailSignup = event =>{
+  const emailSignup = async (event) =>{
     event.preventDefault();
     const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
     
-    createUserWithEmailAndPassword(email, password);
+    await createUserWithEmailAndPassword(email, password);
+    await updateProfile({ displayName: name });
   }
+  if(user){
+    console.log(user);
+    alert('Please check your email for verification')
+ }
 
 
     return (

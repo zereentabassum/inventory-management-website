@@ -1,12 +1,18 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import {useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import GoogleSignIn from '../GoogleSignIn/GoogleSignIn';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { sendPasswordResetEmail } from 'firebase/auth';
 import auth from '../../firebase.init';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
+    const [email, setEmail] = useState('');
     const emailRef = useRef('');
   const passwordRef = useRef('');
 
@@ -43,6 +49,19 @@ const Login = () => {
         signInWithEmailAndPassword(email, password);
     }
 
+    const passwordReset = async() =>{
+      
+      const email = emailRef.current.value;
+      await sendPasswordResetEmail(auth, email)
+        .then(() =>{
+             toast('Email sent');
+            }
+           
+     ) 
+    
+ }
+ 
+
     return (
         <div>
             <h1 className='pt-3 pb-2'>Login</h1>                    <Form onSubmit={emailLogin} className='form'>
@@ -63,7 +82,7 @@ const Login = () => {
                 <br />
                 
                 
-    <Button className='text-decoration-none'  variant='link'>Forgot Password? Reset</Button>
+    <Button onClick={passwordReset} className='text-decoration-none'  variant='link'>Forgot Password? Reset</Button>
     <div className='d-flex align-items-center'>
         <div style={{height:'1px'}} className='bg-danger w-50'></div>
         <h5 className='mt-2 px-2'>Or</h5>
@@ -73,7 +92,7 @@ const Login = () => {
     <GoogleSignIn></GoogleSignIn>
     <p>Don't have an account? <Link className='text-decoration-none' to='/signup'>Sign up</Link></p>
    
-                
+        <ToastContainer/>
     </Form>
         </div>
     );
