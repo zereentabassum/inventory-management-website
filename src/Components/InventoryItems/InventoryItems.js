@@ -4,7 +4,7 @@ import useItems from '../useItems';
 import './InventoryItems.css';
 
 const InventoryItems = () => {
-    const allItems = useItems();
+    const [allItems, setAllItems] = useItems();
     const items = allItems.slice(0, 6);
     
     return (

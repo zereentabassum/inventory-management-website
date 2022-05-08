@@ -1,0 +1,23 @@
+.extra{
+    /* background-color: rgb(226, 37, 75); */
+    padding-top: 20px;
+    padding-bottom: 50px;
+    background-image: url('https://media.istockphoto.com/photos/background-abstract-pink-and-black-dark-are-light-with-the-gradient-picture-id1257045720?k=20&m=1257045720&s=612x612&w=0&h=Tayv7AKbRzlmOAl7DvDjuEcxNWPJXG8SF9L1ZoErO7o=');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+.extra-pic img{
+    border-radius: 10%;
+  
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width:688px){
+    
+    .extra-pic img{
+        border-radius: 10%;
+        width: 160px;
+        margin-bottom: 15px;
+    }
+}

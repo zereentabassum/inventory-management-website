@@ -19,7 +19,7 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark">
   <Container className=''>
-  <Navbar.Brand ><i className='fs-3 pe-5'>Marvella</i></Navbar.Brand>
+  <Navbar.Brand ><i className='fs-3 pe-2'>Marvella</i></Navbar.Brand>
 
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
@@ -33,7 +33,16 @@ const Header = () => {
                     :
                     <Navbar.Brand className='px-4' as={Link}to="/login">Login</Navbar.Brand>
           }
-    <Navbar.Brand className='px-4' as={Link}to="/signup">Sign up</Navbar.Brand>
+          
+    <Navbar.Brand className='ps-4 pe-1' as={Link}to="/signup">Sign up</Navbar.Brand>
+
+    {
+            user && <>
+            <Navbar.Brand className='ps-2' as={Link} to="/manageItems">Manage items</Navbar.Brand>
+            <Navbar.Brand className='ps-2' as={Link} to="/addItem">Add item</Navbar.Brand>
+            <Navbar.Brand className='ps-2' as={Link} to="/myItems">My items</Navbar.Brand>
+            </>
+  }
 
     </Nav>
   </Navbar.Collapse>

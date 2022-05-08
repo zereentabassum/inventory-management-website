@@ -1,5 +1,6 @@
 import React from 'react';
-import Footer from '../Footer/Footer';
+import ExtraSectionOne from '../ExtraSectionOne/ExtraSectionOne';
+// import Footer from '../Footer/Footer';
 import HeadingSection from '../HeadingSection/HeadingSection';
 import InventoryItems from '../InventoryItems/InventoryItems';
 
@@ -8,7 +9,7 @@ const Home = () => {
         <div>
             <HeadingSection></HeadingSection>
             <InventoryItems></InventoryItems>
-            <Footer></Footer>
+            <ExtraSectionOne></ExtraSectionOne>           
         </div>
     );
 };
