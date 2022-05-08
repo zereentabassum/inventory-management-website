@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import './ItemDetails.css';
 
 const ItemDetails = () => {
     const {_id} = useParams();
    const [item, setItem] = useState({});
-   const [minus, setMinus ] = useState(0);
+//    const [minus, setMinus ] = useState();
    useEffect(()=>{
        const url = `https://obscure-thicket-87348.herokuapp.com/item/${_id}`;
 
@@ -15,10 +15,12 @@ const ItemDetails = () => {
        .then(data=> setItem(data))
    }, [])
 
-   const minusOne = () =>{
-       
+   const navigate = useNavigate();
+   const inventoryManage = () =>{
+       navigate('/manageItems');
    }
    
+
   
     return (
         <div className='text-center container mt-4'>
@@ -32,11 +34,16 @@ const ItemDetails = () => {
             <h3><span className='text-success'>Description:</span>  {item.description}</h3>
             <h3><span className='text-success'>Mileage:</span>  {item.mileage} kmpl</h3>
             <h3><span className='text-success'>Supplier name: </span>  {item.supplierName}</h3>
-    
+            <h3 className='text-start'><span className='text-success'>Quantity: </span>  {item.quantity}</h3>
+            <Button  className='mb-1 px-4' variant="danger">Delivered</Button>
+            <br />
+            <input type="number" name="" id="" />
+            <br />
+            <Button  className='mb-1 px-4 mt-1' variant="danger">Restock</Button>
+            
             </div>
             <div className='container'>
-            <h3 className='text-primary text-start'><span>Quantity: </span>     {item.quantity}</h3>
-            <Button onClick={minusOne} className='mb-1 px-4' variant="danger">Delivered</Button>
+            <Button onClick={inventoryManage}  className='text-decoration-none m-5 fs-5 bg-info text-dark' variant='link'>Manage Inventories</Button>
         
             </div>
            

@@ -1,0 +1,22 @@
+.second-extra{
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/images3/Cool-Pink-Background-1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    display: flex;
+}
+
+
+@media only screen and (max-width:688px) {
+    .second-extra{
+        background-image: url('https://www.pixelstalk.net/wp-content/uploads/images3/Cool-Pink-Background-1.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 820px;
+    
+        display: block;
+    }
+    
+    
+
+
+}

@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 import {useSignInWithGoogle} from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 
 const GoogleSignIn = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -21,7 +22,8 @@ const GoogleSignIn = () => {
       }
       let load;
       if (loading) {
-        load = <p>Loading...</p>;
+        // load = <p>Loading...</p>;
+        <Loading></Loading>
       }
 
       // if(user){

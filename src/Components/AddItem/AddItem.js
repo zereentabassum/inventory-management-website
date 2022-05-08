@@ -17,7 +17,9 @@ const AddItem = () => {
     .then(result =>{
         console.log(result);
     } )
+    alert('Item added. Please see in Manage items')
     }
+    
     return (
         <div className='mt-4'>
             <h1>Add Items</h1>

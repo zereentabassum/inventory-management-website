@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Signup.css';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 
 const Signup = () => {
   const [
@@ -25,7 +26,8 @@ const Signup = () => {
     }
     let load;
     if (loading || updating) {
-      load = <p>Loading...</p>;
+      // load = <p>Loading...</p>;
+      <Loading></Loading>
     }
 
 

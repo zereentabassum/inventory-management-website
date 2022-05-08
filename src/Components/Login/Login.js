@@ -9,7 +9,7 @@ import auth from '../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
-
+import Loading from '../Loading/Loading';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -37,7 +37,8 @@ const Login = () => {
          }
          let load;
          if (loading) {
-           load = <p>Loading...</p>;
+          //  load = <p>Loading...</p>;
+          <Loading></Loading>
          }
      
          if(user){
