@@ -11,7 +11,7 @@ const Items = ({item}) => {
     }
 
     return (
-        <div className='items border border-rouded p-3'>
+        <div className='items border border-rouded p-3 car'>
             <img src={image} alt="" />
             <div className='text-start'>
             <h4>{name}</h4>

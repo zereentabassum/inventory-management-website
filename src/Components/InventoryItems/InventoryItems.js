@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Items from '../Items/Items';
 import useItems from '../useItems';
 import './InventoryItems.css';
+import {AiTwotoneCar} from 'react-icons/ai';
 
 const InventoryItems = () => {
     const [allItems, setAllItems] = useItems();
@@ -25,7 +26,7 @@ const InventoryItems = () => {
             </div>   
 
             <div>
-               <Button onClick={inventoryManage}  className='text-decoration-none m-5 fs-5 bg-info text-dark' variant='link'>Manage Inventories</Button>
+               <Button onClick={inventoryManage}  className='text-decoration-none m-5 fs-5 bg-info text-dark' variant='link'>Manage Inventories  <AiTwotoneCar className='text-danger'/></Button>
             </div> 
         </div>
     );

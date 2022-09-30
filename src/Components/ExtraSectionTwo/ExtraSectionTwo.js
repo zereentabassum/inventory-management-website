@@ -4,9 +4,9 @@ import './ExtraSectionTwo.css';
 
 const ExtraSectionTwo = () => {
     return (
-        <div className='second-extra '>
+        <div className='second-extra mb-5'>
         <div className='faq'>
-            <h1 className='text-light pt-5 display-4'>Frequently Asked Questions about our Inventory Items</h1>
+            <h1 className='text-danger pt-5 display-5'>Frequently Asked Questions about our Inventory Items</h1>
         </div>
 
         <div className='accordion-div container py-5'>

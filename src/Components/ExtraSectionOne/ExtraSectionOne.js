@@ -1,14 +1,28 @@
 import React from 'react';
 import './ExtraSectionOne.css';
+import {FaFacebook} from 'react-icons/fa';
+import {ImTwitter} from 'react-icons/im';
+import { Button, Form, InputGroup } from 'react-bootstrap';
 
 const ExtraSectionOne = () => {
     return (
-        <div className='extra text-light pb-1'>
+        <div className='extra text-light pb-5'>
             <h1 className='pb-2'>Stay in touch with us</h1>
-            <div className='img-fluid extra-pic mb-2'>
-                <img className='img-fluid' src="https://www.mcc.ac.zw/wp-content/uploads/2020/10/a58ed8680ff42420a2a2ec9f110a35c1.jpg" alt="" />
+            <div className=' extra-pic mb-4 mt-5'>
+                <FaFacebook size={60} className='text-primary' cursor='pointer'/>
+              <ImTwitter size={60} className='text-info' cursor='pointer'/>
             </div>
-
+            
+      <InputGroup className=" w-50 mx-auto my-5">
+        <Form.Control
+          placeholder="Your Email Address"
+          aria-label="Recipient's email"
+          aria-describedby="basic-addon2"
+        />
+        <Button variant="danger " id="button-addon2 ">
+          Subscribe
+        </Button>
+      </InputGroup>
         </div>
     );
 };

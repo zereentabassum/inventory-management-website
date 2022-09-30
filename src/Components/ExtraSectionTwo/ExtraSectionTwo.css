@@ -1,7 +1,8 @@
 .second-extra{
-    background-image: url('https://www.pixelstalk.net/wp-content/uploads/images3/Cool-Pink-Background-1.jpg');
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)),url('https://img.freepik.com/free-photo/minsk-belarus-dec-15-2021-photo-modern-car-assembly-plant-interior-hightech-factory-new-automobiles_645730-26.jpg?t=st=1657975092~exp=1657975692~hmac=754949eb14c279bf1c57dab51ef1482b4999fd82d90f0f4906a677e3e38cb03a&w=740');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover; */
 
     display: flex;
 }

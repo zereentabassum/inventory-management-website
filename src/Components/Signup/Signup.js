@@ -5,6 +5,7 @@ import './Signup.css';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
+import GoogleSignIn from '../GoogleSignIn/GoogleSignIn';
 
 const Signup = () => {
   const [
@@ -80,6 +81,12 @@ const Signup = () => {
               Signup
             </Button>
             <p>Already have an account? <Link className='text-decoration-none' to='/login'>Login</Link></p>
+            <div className='d-flex align-items-center'>
+            <div style={{height:'1px'}} className='bg-danger w-50'></div>
+            <h5 className='mt-2 px-2'>Or</h5>
+            <div style={{height:'1px'}} className='bg-danger w-50'></div>
+        </div>
+            <GoogleSignIn></GoogleSignIn>
             
 </Form>
         </div>

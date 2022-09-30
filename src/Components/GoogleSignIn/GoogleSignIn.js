@@ -4,6 +4,7 @@ import {useSignInWithGoogle} from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
+import {FcGoogle} from 'react-icons/fc';
 
 const GoogleSignIn = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -38,7 +39,8 @@ const GoogleSignIn = () => {
         <div>
             {errorMessage}
             {load}
-            <Button onClick={()=> signInWithGoogle()} className='btn btn-danger px-5 mt-2 mb-4'>Sign in With Google</Button>
+            {/* <Button onClick={()=> signInWithGoogle()} className='btn btn-outline-danger bg-light px-5 mt-2 mb-4'>Continue With Google <FcGoogle /> </Button> */}
+            <Button onClick={()=> signInWithGoogle()} variant="outline-danger" className='px-5 mt-2 mb-4' >  <FcGoogle size={24}/>  Continue With Google  </Button>{' '}
         </div>
     );
 };

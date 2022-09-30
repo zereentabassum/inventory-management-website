@@ -3,7 +3,12 @@
     height: 150px;
 }
 .items{
-    box-shadow: 3px 3px 15px;
+    box-shadow: 3px 3px 16px;
 }
+.car:hover img {
+    transform: scale(106%);
+}
+
+
 
 
